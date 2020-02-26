@@ -8,8 +8,7 @@ const Form = props => {
         role: ''
     });
 
-    const handleChanges = event => {
-        console.log(data);
+    const handleChanges = event => {        
         setData({
             ...data,
             [event.target.name]: event.target.value
@@ -18,7 +17,7 @@ const Form = props => {
 
     const submitForm = event => {
         event.preventDefault();
-        props.addNewNote(data);
+        props.addNewMember(data);
         setData({ name: "", email: "", role: "" });
       };
 
@@ -52,7 +51,7 @@ const Form = props => {
             onChange={handleChanges}
             value={data.role}
           </select>
-          {/* <button type="submit">Add Note</button> */}
+          <button type="submit">Submit</button>
         </form>
     );
 };

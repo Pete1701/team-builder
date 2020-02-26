@@ -3,4 +3,13 @@
     flex-direction: column;
     color: rgb(245, 153, 67);
     margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.formName button {
+    margin-top: 25px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: rgb(22, 129, 252);
+    background-color: rgb(245, 153, 67);
 }
