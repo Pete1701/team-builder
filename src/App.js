@@ -2,9 +2,16 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Form from './Form';
+import MemberList from './MemberList';
 
 function App() {
-  const [members, setMembers] = useState('');
+  const [members, setMembers] = useState([
+    {
+      name: '',
+      email: '',
+      role: ''
+    }
+  ]);
 
   const addNewMember = data => {
     const newMember = {
@@ -17,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -30,7 +38,8 @@ function App() {
         >
           Learn React
         </a>
-        <Form addNewMember={addNewMember}/>
+        <Form addNewMember={addNewMember} />
+        <MemberList members={members} />
       </header>
     </div>
   );
